@@ -52,5 +52,5 @@
 
 .wind__speed::after {
     content: "km/h";
-    font-size: 14px;
+    font-size: 15px;
 }
