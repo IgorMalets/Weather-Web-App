@@ -1,11 +1,9 @@
 // temp city counrty wind comment
 
-let btn = document.querySelector(".main__button");
-let input = document.querySelector(".main__input");
+// let btn = document.querySelector(".main__button");
 
-function exploreHandler() {
+function exploreHandler(city) {
     try {
-        city = input.value;
         link = `https://api.weatherapi.com/v1/current.json?key=f22b48abdd4943b2af6165250211510&q=${city}&aqi=no`;
 
         const request = new XMLHttpRequest();
@@ -28,10 +26,8 @@ function exploreHandler() {
         document.querySelector(".wind__speed").innerHTML =
             data.current.wind_kph;
 
-        change_window();
+        localStorage.setItem("city", city);
     } catch {
         alert("Incorrect city name!");
     }
 }
-
-btn.addEventListener("click", exploreHandler);
