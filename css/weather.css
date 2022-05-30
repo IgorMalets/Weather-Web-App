@@ -54,3 +54,10 @@
     content: " km/h";
     font-size: 15px;
 }
+
+.weather__icon {
+    display: block;
+    margin: 0 auto;
+    height: 64px;
+    width: 64px;
+}

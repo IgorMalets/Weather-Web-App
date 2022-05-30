@@ -26,8 +26,20 @@ function exploreHandler(city) {
         document.querySelector(".wind__speed").innerHTML =
             data.current.wind_kph;
 
+        let path = getImageNumber(data.current.condition.icon);
+
+        document.querySelector(".weather__icon").setAttribute("src", path);
+
         localStorage.setItem("city", city);
     } catch {
         alert("Incorrect city name!");
     }
+}
+
+function getImageNumber(image_link) {
+    let parts = image_link.split("/");
+    let name = parts[parts.length - 1];
+    console.log(name);
+    let path = `./img/icons/${name}`;
+    return path;
 }
