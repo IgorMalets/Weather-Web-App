@@ -1,0 +1,21 @@
+.card {
+  width: 600px;
+  height: 340px;
+  background-image: url("car.jpg");
+  background-size: cover;
+  border-radius: 40px;
+  color: rgb(249, 249, 249);
+  font-family: "Lato", sans-serif;
+  padding-top: 120px;
+  box-sizing: border-box;
+}
+
+.Car {
+  text-align: center;
+  margin: 0px;
+}
+
+.BMW {
+  text-align: center;
+  margin: 0px;
+}
